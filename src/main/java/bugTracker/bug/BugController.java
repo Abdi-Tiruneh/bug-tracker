@@ -51,7 +51,7 @@ public class BugController {
 
     @PutMapping("/{bugId}/assign/{userId}")
     public ResponseEntity<BugResponse> assignToUser(@PathVariable Long bugId, @PathVariable Long userId) {
-        return ResponseEntity.ok(bugService.assignToUser(bugId, bugId));
+        return ResponseEntity.ok(bugService.assignToUser(bugId, userId));
     }
 
     @PutMapping("/{bugId}/update-status")
